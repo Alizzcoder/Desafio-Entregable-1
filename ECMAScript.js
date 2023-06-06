@@ -9,12 +9,12 @@ class ProductManager {
             return;
         }
 
-      //  if (this.products.some (product => product.code === code )) {
-      //      console.log ('Code ya existe')
-       //     return;
-       //     }
+       if (this.products.some (product => product.code === code )) {
+       console.log ('Code ya existe')
+        return;
+        }
 
-            const product = {
+        const product = {
             title,
             decription,
             price,
@@ -47,8 +47,11 @@ class ProductManager {
 }
 
 const productManager = new ProductManager();
-productManager.getProducts(productManager);
+console.log (productManager.getProducts());
 productManager.addProduct('producto prueba','Este es un producto prueba',200,'Sin imagen','abc123', 25 )
-productManager.getProducts(productManager);
+console.log (productManager.getProducts());
 productManager.addProduct('producto prueba','Este es un producto prueba',200,'Sin imagen','abc123', 25 )
 productManager.getProductById(7);
+
+productManager.addProduct('prueba2','Este es un producto prueba2', 400,'linda imagen','tateti', 50 )
+console.log (productManager.getProducts());
