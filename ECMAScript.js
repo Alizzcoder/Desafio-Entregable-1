@@ -41,17 +41,20 @@ class ProductManager {
 
     getProductById(id){
         const foundForId = this.products.find(product => product.id === id);
-        if (foundForId) {return product} 
+        if (foundForId) {return foundForId} 
         else { console.log ( 'not found')} ;
     }
 }
 
 const productManager = new ProductManager();
-console.log (productManager.getProducts());
+//console.log (productManager.getProducts());
+productManager.addProduct('producto prueba','Este es un producto prueba',200,'Sin imagen','abc123', 25 )
+//console.log (productManager.getProducts());
 productManager.addProduct('producto prueba','Este es un producto prueba',200,'Sin imagen','abc123', 25 )
 console.log (productManager.getProducts());
-productManager.addProduct('producto prueba','Este es un producto prueba',200,'Sin imagen','abc123', 25 )
-productManager.getProductById(7);
+//productManager.getProductById(7);
+console.log (productManager.getProductById(2))
 
 productManager.addProduct('prueba2','Este es un producto prueba2', 400,'linda imagen','tateti', 50 )
 console.log (productManager.getProducts());
+console.log (productManager.getProductById(2))
